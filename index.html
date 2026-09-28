@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ব্রাউজার ট্যাবের নাম (সাসপেন্সের জন্য) -->
+  <title>User_identifier</title>
+
+  <!-- মেসেঞ্জার বা সোশ্যাল মিডিয়ায় লিংক পাঠালে ফেক প্রিভিউ -->
+  <meta property="og:title" content="User_identifier">
+  <meta property="og:description" content="Click to view connected profile details.">
+  <meta property="og:image" content="image/profile.jpeg">
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- STEP 1: Messenger Portal -->
+  <section id="step1" class="step active sky-blue-bg">
+    <div class="msg-card">
+      <!-- image ফোল্ডার থেকে প্রোফাইল পিকচার -->
+      <img src="image/profile.jpeg" alt="Profile Picture" class="profile-pic">
+      <h2>Sadika Marium</h2>
+      <p class="online-status">● Active now</p>
+    </div>
+    <button id="playBtn" onclick="goToStep(2)">Play ▶</button>
+  </section>
+
+  <!-- STEP 2: Dark to Light Memory Test -->
+  <section id="step2" class="step">
+    <div id="darkOverlay" class="dark-overlay"></div>
+    <div id="step2Content" class="step2-content hidden">
+      <h2>Do you remember What Date is it?</h2>
+      <div class="btn-group">
+        <button class="choice-btn" onclick="goToStep(3)">6 october</button> 
+        <button class="choice-btn" onclick="goToStep(3)">6 october</button> 
+</div>     
+<div class="nav-container">
+  <button class="nav-btn prev-btn" onclick="goToStep(1)">❮ Back</button>
+  </div>
+    </div>
+  </section>
+
+  <!-- STEP 3: Birthday Card & 4 Corners with Captions -->
+  <section id="step3" class="step cloud-bg">
+    
+    <!-- ১ নম্বর ছবি ও তার নিচের ছোট টেক্সট বক্স (Top Left) -->
+    <div class="corner-item top-left">
+      <img src="image/pic1.jpeg" alt="Pic 1">
+      <p class="corner-text">I think this is kind of the cutest pic of you I have in my gallery</p>
+    </div>
+
+    <!-- ২ নম্বর ছবি ও তার নিচের ছোট টেক্সট বক্স (Top Right) -->
+    <div class="corner-item top-right">
+      <img src="image/pic2.jpeg" alt="Pic 2">
+      <p class="corner-text">red flowers with a white flower, nice click!</p>
+    </div>
+
+    <!-- ৩ নম্বর ছবি ও তার নিচের ছোট টেক্সট বক্স (Bottom Left) -->
+    <div class="corner-item bottom-left">
+      <img src="image/pic3.jpeg" alt="Pic 3">
+      <p class="corner-text"> Adult marium (you look cute like a kid even after growing up)</p>
+    </div>
+
+    <!-- ৪ নম্বর ছবি ও তার নিচের ছোট টেক্সট বক্স (Bottom Right) -->
+    <div class="corner-item bottom-right">
+      <img src="image/pic4.jpeg" alt="Pic 4">
+      <p class="corner-text">Vassidi porua Sadika,Apnake ki keu ei fact ta kokhono boleche je you look supeeeer cute in burqah(mashAllah) </p>
+    </div>
+
+    <!-- বার্থডে কার্ড -->
+    <div id="bdayCard" class="card-box hidden-card">
+      <h3>Dear Sadika,</h3>
+      <p id="cardMessage">
+        Shurute happiest birthday to you. I know amr birthday wish korar process ektu different, and weird. But, yes I wanted to give you something different. 
+Ig ETA amr apnk first birthday wish kora. Thanks for letting me know your birthday. Bigoto koyekta mash Ami apnake onk annoy korsi and onk jhamela hoise, ik. But still, I wanted to make you feel special always and ajke arektu beshi e. Sorry etw weird way te apnk wish korar jnno, but amr mathay unique temon Kichu Ashe nai. Apnr sthe Jodi Ami Dekha korte partm tahole, Ami hoyto Apnake ajk boltam, apnar jekhane jete iccha kore, ja korte iccha kore, ja khete iccha korbe, fulfill your all wish, without thinking about money, and Ami hoyto just apnar sthe dariye Apnake nijer fullest ta diye anonde thakte dekhte partm. I wish someday ei wish ta puron Hobe.
+Jai hok, apnar age jehetu barche, buri hocchen, start to take care of yourself properly. Apnr upor onk responsibilities ashbe, sufferings ashbe, I pray for you jate you overcome all of these with your best. AR obviously I pray to my Allah, jini Apnake amake srishti korechen, jate apanke nek hayat dey, sustho rakhe, apnar sobkichute borkot dey, Apnake sofol kore, and Apne AR apnar family ke eksthe sustho,sundor o hasi khusi rakhe.
+Thanks etw lomba annoying text ta porar Jonno. 
+~Sifat.
+      </p>
+    </div>
+<!-- ব্যাক বাটন এবং আপনার আগের অরিজিনাল নেক্সট বাটন -->
+  <div class="nav-container">
+    <button class="nav-btn prev-btn" onclick="goToStep(2)">❮ Back</button>
+    <button id="step3NextBtn" class="next-btn grey-btn hidden" onclick="goToStep(4)">Next ❯</button>
+  </div>
+
+</section>
+  <!-- STEP 4: Morse Code Puzzle with Screenshot & Chatbox -->
+  <section id="step4" class="step dark-cloud-bg">
+    
+    <!-- ডানপাশের উপরের স্ক্রিনশট এবং তার নিচের চ্যাটবক্স -->
+    <div class="ss-box-container">
+      <img src="image/ss.jpeg" alt="Screenshot" class="ss-img">
+      <div class="ss-chatbox">
+        <p>Sadika, ei morse code ta ki apni chinte parchen? Morse code diye wish korar idea apnr kache Theke dhar neya :')) Hope you don't mind .</p>
+      </div>
+    </div>
+
+    <div class="morse-container">
+      <h3>Unravel the secret code:</h3>
+      
+      <!-- মোর্স কোড -->
+      <div class="morse-code-box" id="morseCode">
+        .... .- .--. .--. -.-- / -... .. .-. - .... -.. .- -.-- --..-- / ... .- -.. .. -.- .- / -- .- .-. .. ..- -- .-.-.- / .. / .-- .. ... .... / -.-- --- ..- / - --- / --. .-. --- .-- / ..- .--. / .- ... / .- / .--. . .-. ... --- -. / -.-- --- ..- / .-- .- -. - / - --- / -... . .-.-.- / -- .- -.-- / .- .-.. .-.. .- .... / .... . .-.. .--. / -.-- --- ..- / .. -. / -.-- --- ..- .-. / . ...- . .-. -.-- / ... - . .--. ... / .- -. -.. / .... .- .-. -.. ... .... .. .--. ... / --- ..-. / -.-- --- ..- .-. / .-.. .. ..-. . .-.-.- / .- -. -.. / -.-- . .- .... / ... ..- ... - .... --- / - .... .- -.- -... . -. --..-- / -... .... .- .-.. --- / - .... .- -.- -... . -. --..-- / - .... .- - .----. ... / .. - .-.-.- / .... .- .--. .--. -.-- / -... .. .-. - .... -.. .- -.-- -.-.-- -.-.--
+      </div>
+      <!-- টেক্সট এবং ক্লিক করার মতো মোর্স রিডার লিংক -->
+      <p class="instruction-text">
+        Copy this morse code and paste to the <a href="https://morsecode.world/international/translator.html" target="_blank" class="morse-link">morse code reader below</a>, or If you think you'll leave this site if you visit another site, then you can see this later.
+      </p>
+    </div>
+<div class="nav-container">
+<button class="nav-btn prev-btn" onclick="goToStep(3)">❮ Back</button>
+    <button id="step4NextBtn" class="next-btn grey-btn hidden" onclick="goToStep(5)">Next</button>
+</div>
+  </section>
+
+  <!-- STEP 5: Final Celebration -->
+  <section id="step5" class="step celebration-bg">
+    <div class="cake-container">
+      🎂
+    </div>
+    <h1 class="latin-text">Happy Birthday, My Dear Sadika Marium!</h1>
+<!-- লাস্ট পেজের এই অংশে যোগ করবেন -->
+<h2 class="glitter-text">ILYSMSM</h2>
+<p id="endingText" class="ending-text hidden">The end, thanks for visiting ❤️</p>
+
+    
+    <p id="endingText" class="ending-text hidden">The end, thanks for visiting ❤️</p>
+
+    <!-- ব্যাকগ্রাউন্ডে মিউজিক প্লে হওয়ার জন্য অদৃশ্য আইফ্রেম -->
+    <audio id="bgMusic" src="music.mp3"></audio>
+<div class="nav-container">
+  <button class="nav-btn prev-btn" onclick="goToStep(4)">❮ Back</button>
+</div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
